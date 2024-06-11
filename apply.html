@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('queenbackground.webp');
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+}
+div{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.container {
+  background-color: #fff;
+  padding-left:20% ;
+  padding-right: 20% ;
+  border-radius: 80px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  position: absolute;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10%;
+  color: #333;
+  font-size: 50px;
+  font-family: "Oswald", sans-serif;
+}
+
+.picture-input {
+  width: 50vw;
+  height: 20vh;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20%;
+  overflow: hidden;
+    right: 10%;
+    bottom: 15%;
+    position: relative;
+    right: 10%;
+}
+
+.picture-input img {
+  width: 100%;
+  height: 100%;
+  
+  object-fit: cover;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: block;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.custom-file-upload:hover {
+  background-color: #e0e0e0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 9%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+button {
+  background-color: green;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: green;
+}
+.letter{
+    font-size: 1.7em;
+    font-weight: 600;
+    margin-bottom: 3%;
+    font-family: "Oswald", sans-serif;
+}
+/* Mobile-specific styles */
+@media only screen and (max-width: 600px) {
+ .container {
+    padding: 10px;
+  }
+ .picture-input {
+    height: 100px;
+  }
+ .custom-file-upload {
+    height: 100px;
+    font-size: 16px;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 16px;
+  }
+  button {
+    font-size: 16px;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>CUSTOMER INFO</h1>
+    <div class="picture-input">
+     
+      <input type="file" id="picture" name="picture" required>
+      <label for="picture" class="custom-file-upload">
+        <i class="fas fa-upload"></i class="letter"> อัพโหลดรูปภาพ
+      </label>
+    </div>
+
+    <div>
+      <label for="firstName" class="letter">First name</label>
+      <input type="text" id="firstName" name="firstName" placeholder="กรอกชื่อจริง" required>
+    </div>
+    <div>
+      <label for="lastName" class="letter">Last name</label>
+      <input type="text" id="lastName" name="lastName" placeholder="กรอกนามสกุล" required>
+    </div>
+    <div>
+      <label for="nickname" class="letter">nickname</label>
+      <input type="text" id="linkedin" name="linkedin" placeholder="กรอกชื่อเล่น">
+    </div>
+    <div>
+      <label for="experience?" class="letter">your experience?</label>
+      <textarea id="interests" name="interests" placeholder="ประสบการณ์การเล่นดนตรี" rows="4"></textarea>
+    </div>
+    <div>
+      <label for="style" class="letter">music style?</label>
+      <input type="text" id="start" name="start" placeholder="แนวเพลงที่เล่นได้">
+
+    </div>
+    <div class="picture-input">
+     
+        <input type="file" id="video" name="video" required>
+        <label for="video" class="custom-file-upload">
+          <i class="fas fa-upload"></i class="letter"> อัพโหลดวีดีโอขณะเล่น
+        </label>
+      </div>
+    <button type="submit" class="letter">APPLY</button>
+  </div>
+</body>
+</html>
